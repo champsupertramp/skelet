@@ -36,7 +36,7 @@
 
       $nav.find('ul:first a').on('click', function (e) {
 
-        e.preventDefault();
+      //  e.preventDefault();
 
         var $el     = $(this),
             $next   = $el.next(),
@@ -76,10 +76,9 @@
       });
 
       $expand.on('click', function (e) {
-        e.preventDefault();
+       // e.preventDefault();
         $this.find('.sk-body').toggleClass('sk-show-all');
         $(this).find('.fa').toggleClass('fa-eye-slash' ).toggleClass('fa-eye');
-        console.log(4);
       });
 
     });

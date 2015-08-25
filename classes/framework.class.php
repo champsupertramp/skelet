@@ -418,7 +418,7 @@ if(!class_exists("SkeletFramework")){
 
                 echo '<li class="sk-sub'. $active_list .'">';
 
-                  echo '<a href="#" class="sk-arrow">'. $tab_icon . $tab['title'] .'</a>';
+                  echo '<a href="#/section/'.$tab['name'] .'" class="sk-arrow">'. $tab_icon . $tab['title'] .'</a>';
 
                   echo '<ul'. $active_style .'>';
                   foreach ( $tab['sections'] as $tab_section ) {
@@ -426,7 +426,7 @@ if(!class_exists("SkeletFramework")){
                     $active_tab = ( $section_id == $tab_section['name'] ) ? ' class="sk-section-active"' : '';
                     $icon = ( ! empty( $tab_section['icon'] ) ) ? '<i class="sk-icon '. $tab_section['icon'] .'"></i>' : '';
 
-                    echo '<li><a href="#"'. $active_tab .' data-section="'. $tab_section['name'] .'">'. $icon . $tab_section['title'] .'</a></li>';
+                    echo '<li><a href="#/section/sub/'.$tab_section['name'] .'"'. $active_tab .' data-section="'. $tab_section['name'] .'">'. $icon . $tab_section['title'] .'</a></li>';
 
                   }
                   echo '</ul>';
@@ -440,7 +440,7 @@ if(!class_exists("SkeletFramework")){
                 if( isset( $tab['fields'] ) ) {
 
                   $active_list = ( $section_id == $tab['name'] ) ? ' class="sk-section-active"' : '';
-                  echo '<li><a href="#"'. $active_list .' data-section="'. $tab['name'] .'">'. $icon . $tab['title'] .'</a></li>';
+                  echo '<li><a href="#/section/'.$tab['name'] .'"'. $active_list .' data-section="'. $tab['name'] .'">'. $icon . $tab['title'] .'</a></li>';
 
                 } else {
 
