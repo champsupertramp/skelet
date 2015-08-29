@@ -341,7 +341,7 @@ if(!class_exists("SkeletFramework")){
       if(!defined( 'SK_PARENT_MENU' )){
         $set_parent_slug = isset($args["menu_slug"])?$args["menu_slug"]:"pa-main-menu";
         define( 'SK_PARENT_MENU',$set_parent_slug."_");
-        call_user_func("add_menu_page", "Maginoo", "Maginoo", "mgo-nonexistent-capability", SK_PARENT_MENU, null, $args['menu_icon'], $args['menu_position'] );
+        call_user_func("add_menu_page", "WPStreet", "WPStreet", "wpst-nonexistent-capability", SK_PARENT_MENU, null, $args['menu_icon'], $args['menu_position'] );
       }
        
         
@@ -392,7 +392,7 @@ if(!class_exists("SkeletFramework")){
             //$this->settings['header_title']." <small>".$this->settings['current_version']."</small>":"Skelet Framework <small>by PressApps</small>"); 
             $this->settings['header_title']:"Skelet Framework"); 
         echo '</h1>';
-        echo '<p class="feedback"><a target="_blank" href="http://www.maginoo.co/feedback/">Feedback</a></p>';
+        echo '<p class="feedback"><a target="_blank" href="http://www.WPStreet.co/feedback/">Feedback</a></p>';
         echo '<fieldset>';
         echo ( $this->settings['ajax_save'] === true ) ? '<span id="sk-save-ajax">'. __( 'Settings saved.', SK_TEXTDOMAIN ) .'</span>' : '';
         submit_button( __( 'Save Changes', SK_TEXTDOMAIN ), 'sk-save', 'save', false, array( 'data-ajax' => $this->settings['ajax_save'], 'data-save' => __( 'Saving...', SK_TEXTDOMAIN ) ) );

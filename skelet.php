@@ -206,31 +206,31 @@ if(!class_exists("Skelet_PA_Widget")){
 
 
 /**
- * Add PressApps Menu
+ * Add WPStreet Menu
  */
-if(!class_exists("Skelet_PressApps_Menu")){
+if(!class_exists("Skelet_WPStreet_Menu")){
 
-  class Skelet_PressApps_Menu{
+  class Skelet_WPStreet_Menu{
 
-    public static function pa_main_menu(){
+    public static function main_menu(){
         global $skelet_paths, $submenu;
       
-        call_user_func("add_submenu_page", SK_PARENT_MENU, "Products", "Products", "manage_options", "pressapps-product", array("Skelet_PressApps_Menu","get_pa_general_pages"));
-        call_user_func("add_submenu_page", SK_PARENT_MENU, "Help", "Help", "manage_options", "pressapps-help", array("Skelet_PressApps_Menu","get_pa_general_pages"));
+        call_user_func("add_submenu_page", SK_PARENT_MENU, "Products", "Products", "manage_options", "wpst-product", array("Skelet_WPStreet_Menu","get_general_pages"));
+        call_user_func("add_submenu_page", SK_PARENT_MENU, "Help", "Help", "manage_options", "wpst-help", array("Skelet_WPStreet_Menu","get_general_pages"));
                           
    }
-    public static function get_pa_general_pages(){
-      if(!class_exists("PressApps"))
+    public static function get_general_pages(){
+      if(!class_exists("WPStreet"))
       {
-            include_once wp_normalize_path(plugin_dir_path(__FILE__ ) .'/pressapps/pressapps.class.php');
-            $pa = new PressApps;
+            include_once wp_normalize_path(plugin_dir_path(__FILE__ ) .'/wpstreet/wpst.class.php');
+            $pa = new WPStreet;
             $pa::route(isset($_GET["page"])?$_GET["page"]:"");
       }
     }
 
   
   }
-     add_action("admin_menu",array("Skelet_PressApps_Menu","pa_main_menu"),999);
+     add_action("admin_menu",array("Skelet_WPStreet_Menu","main_menu"),999);
 
 
 }
