@@ -492,7 +492,7 @@ if(!class_exists("SkeletFramework")){
       global $skelet_path;
       echo '<footer class="sk-footer">';
         echo '<img src="' . $skelet_path["uri"] . '/assets/images/madeby.png">';
-        echo '<a target="_blank" href="http://pressapps.co/"><img src="' . $skelet_path["uri"] . '/assets/images/pressapps.png"></a>';
+        echo '<a target="_blank" href="http://wpstreet.co/"><img src="' . $skelet_path["uri"] . '/assets/images/wpstreet.png"></a>';
       echo '</footer>'; // end .sk-footer
 
     }
